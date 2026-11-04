@@ -349,6 +349,14 @@ footer small {
   font-size: 1.18rem;
   margin-bottom: 32px;
 }
+.affiliate-notice {
+  max-width: 680px;
+  margin: -8px 0 28px;
+  padding: 15px 18px;
+  background: var(--cream);
+  border-left: 3px solid var(--rust);
+  font-size: 0.82rem;
+}
 .program-hero-aside {
   border-top: 1px solid var(--ink);
   padding-top: 22px;

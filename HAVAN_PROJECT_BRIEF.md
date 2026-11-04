@@ -56,7 +56,7 @@ dist/
 - Trang chủ có ba điểm bắt đầu, ba bài hướng dẫn mở bằng hộp thoại, phần sản phẩm nổi bật, giới thiệu cách chọn và nội dung disclosure/privacy của bản xem thử.
 - Trang sản phẩm có hai hướng copy **AIDA/PAS** để người chủ xem và chọn; nút chuyển chỉ thay phần mở đầu, không phải hai landing page hoàn toàn độc lập.
 - Ảnh là minh họa bằng AI, không phải ảnh khóa học, học viên hay giảng viên thật.
-- CTA hiện dẫn tới trang nhà cung cấp bằng **link thường**, chưa có mã affiliate.
+- CTA trên trang chương trình đã dùng ClickBank HopLink của tài khoản `havanfit`, với TID riêng cho vị trí hero, giữa trang và cuối trang; disclosure được đặt gần liên kết.
 - Chưa có form, newsletter, dữ liệu khách hàng, analytics, pixel, thanh toán hay backend.
 - Bản xem riêng đã được kiểm tra thao tác chính trên desktop; cần kiểm tra lại trên điện thoại thật trước khi công bố.
 - Nội dung hiện còn nhãn “Design preview” và lời chú thích dành riêng cho mockup; phải rà soát khi chuyển sang bản công khai.
@@ -90,7 +90,7 @@ Tài liệu chính thức:
 5. Thiết lập `www.havan.fit` và chuyển hướng về một hostname chính; chờ DNS/HTTPS hoạt động rồi kiểm tra trên desktop và mobile.
 6. Chỉ đưa công khai chiến dịch sau khi rà soát nội dung, link, disclosure, privacy, tài sản hình ảnh và đo lường.
 
-**Chưa thực hiện:** tạo repo trong GitHub cá nhân của chủ dự án, kết nối Cloudflare, thay đổi nameserver/DNS, trỏ `havan.fit`, bật affiliate. Không suy ra những việc đó đã xong từ mockup riêng.
+**Trạng thái cập nhật 04/11/2026:** source đã được chuyển vào repository GitHub của chủ dự án, `havan.fit` đã hoạt động và ClickBank HopLink đã được gắn trên trang chương trình. Chưa bật công cụ analytics/pixel của bên thứ ba.
 
 ## 8. Nội dung và đo lường giai đoạn thử
 

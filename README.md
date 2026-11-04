@@ -45,6 +45,7 @@ Do not delete unrelated MX/TXT records used for email or domain verification. DN
 ## Content boundaries
 
 - The Hyperbolic Stretching page is an informational overview, not a first-person product review.
-- The current provider link is not an affiliate link.
-- Update `disclosure.html` and `privacy.html` before enabling affiliate tracking, analytics, pixels, forms or a newsletter.
+- The program page uses a ClickBank HopLink with separate Tracking IDs for its hero, middle and final CTA placements.
+- Affiliate disclosures are shown near the links and documented in `disclosure.html` and `privacy.html`.
+- Update `privacy.html` before enabling first-party analytics, pixels, forms or a newsletter.
 - The hero image is AI-generated specifically for HAVAN and is not vendor media.
