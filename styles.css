@@ -486,6 +486,142 @@ footer small {
   padding: 70px 28px 110px;
   font-size: 0.88rem;
 }
+.method-section {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 90px;
+  align-items: center;
+}
+.method-copy h2,
+.contents-section h2,
+.comparison-section h2,
+.mid-cta h2,
+.faq-section h2 {
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0 0 28px;
+}
+.fine-print,
+.comparison-note {
+  font-size: 0.82rem;
+  color: #5e6a64;
+}
+.decision-card {
+  background: var(--ink);
+  color: #fff;
+  padding: 42px;
+}
+.decision-card blockquote {
+  font: 400 2rem/1.15 "Newsreader", serif;
+  margin: 45px 0;
+}
+.contents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+.contents-grid article {
+  background: var(--cream);
+  padding: 38px;
+}
+.contents-grid h3 {
+  font-size: 2rem;
+  margin: 35px 0 12px;
+}
+.content-number {
+  color: var(--rust);
+  font: 400 1.5rem "Newsreader", serif;
+}
+.reality-check {
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  padding: 30px 36px;
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 40px;
+}
+.reality-check p {
+  margin: 0;
+}
+.comparison-wrap {
+  overflow-x: auto;
+  margin-top: 45px;
+}
+.comparison-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 700px;
+}
+.comparison-wrap th,
+.comparison-wrap td {
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.comparison-wrap thead th {
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.comparison-wrap tbody th {
+  font-family: "Newsreader", serif;
+  font-size: 1.3rem;
+  width: 22%;
+}
+.mid-cta {
+  max-width: var(--max);
+  margin: 0 auto 100px;
+  padding: 55px;
+  background: #d88b70;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+}
+.mid-cta h2 {
+  margin-bottom: 0;
+}
+.practical-section {
+  background: #f1ede3;
+  max-width: none;
+  padding-left: max(calc((100% - var(--max)) / 2), 28px);
+  padding-right: max(calc((100% - var(--max)) / 2), 28px);
+}
+.faq-list {
+  margin-top: 45px;
+  border-top: 1px solid var(--ink);
+}
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  font: 400 1.45rem "Newsreader", serif;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list summary::after {
+  content: "+";
+  color: var(--rust);
+}
+.faq-list details[open] summary::after {
+  content: "−";
+}
+.faq-list details p {
+  max-width: 760px;
+  margin: 18px 0 5px;
+}
 @media (max-width: 800px) {
   .site-header {
     height: 70px;
@@ -572,7 +708,9 @@ footer small {
   }
   .program-hero,
   .split-copy,
-  .unknowns {
+  .unknowns,
+  .method-section,
+  .mid-cta {
     grid-template-columns: 1fr;
     gap: 35px;
   }
@@ -586,7 +724,9 @@ footer small {
     padding: 75px 25px;
   }
   .fact-grid,
-  .fit-grid {
+  .fit-grid,
+  .contents-grid,
+  .reality-check {
     grid-template-columns: 1fr;
   }
   .fit-section {
@@ -595,5 +735,17 @@ footer small {
   }
   .program-cta {
     padding: 75px 25px;
+  }
+  .decision-card,
+  .contents-grid article {
+    padding: 30px;
+  }
+  .mid-cta {
+    margin: 0;
+    padding: 65px 25px;
+  }
+  .reality-check {
+    gap: 12px;
+    padding: 28px;
   }
 }
