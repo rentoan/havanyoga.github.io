@@ -17,6 +17,17 @@ Run the product-system check locally with:
 node scripts/validate-products.mjs
 ```
 
+## SEO checks
+
+The deployment workflow rebuilds `sitemap.xml` from indexable HTML files and uses the latest Git commit date for each URL. It then checks every indexable page for a title, description, canonical URL, favicon, Open Graph metadata, Twitter card and valid JSON-LD.
+
+```powershell
+node scripts/build-sitemap.mjs
+node scripts/validate-seo.mjs
+```
+
+Local mobile Lighthouse baseline after the SEO/performance pass: Performance 98, Accessibility 100, Best Practices 100 and SEO 100. Results can vary by device, network and deployment response time.
+
 ## Local preview
 
 Run a static server from this directory, for example:

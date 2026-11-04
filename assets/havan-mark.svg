@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">HAVAN</title>
+  <desc id="desc">An abstract H formed by two leaves and a central path.</desc>
+  <rect width="512" height="512" rx="96" fill="#213128"/>
+  <path d="M148 112c70 12 108 55 108 128-70-12-108-55-108-128Z" fill="#b8c4aa"/>
+  <path d="M364 112c-70 12-108 55-108 128 70-12 108-55 108-128Z" fill="#d88b70"/>
+  <path d="M176 248v152M336 248v152M176 320h160" fill="none" stroke="#fffdf8" stroke-width="34" stroke-linecap="round"/>
+</svg>

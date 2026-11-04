@@ -18,8 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Validate product catalog
         run: node scripts/validate-products.mjs
+      - name: Build sitemap
+        run: node scripts/build-sitemap.mjs
+      - name: Validate SEO metadata
+        run: node scripts/validate-seo.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
