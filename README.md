@@ -2,6 +2,21 @@
 
 Static English-language editorial website for calm at-home movement guidance. No build step or backend is required.
 
+## Product guide architecture
+
+- `/products/index.html` is the public program-guide hub.
+- `/products/<slug>.html` contains a unique long-form guide for each product.
+- `/products/catalog.json` is the structured source of truth for product status, verification and affiliate metadata.
+- `/products/README.md` documents the publishing and editorial workflow.
+- `scripts/validate-products.mjs` prevents deployment when catalog entries, page IDs, disclosures or CTA tracking IDs are inconsistent.
+- `program.html` preserves the old URL and redirects to the current Hyperbolic Stretching guide.
+
+Run the product-system check locally with:
+
+```powershell
+node scripts/validate-products.mjs
+```
+
 ## Local preview
 
 Run a static server from this directory, for example:

@@ -357,6 +357,167 @@ footer small {
   border-left: 3px solid var(--rust);
   font-size: 0.82rem;
 }
+.breadcrumbs {
+  margin: 0 0 22px;
+  font-size: 0.78rem;
+  color: #5e6a64;
+}
+.breadcrumbs a {
+  font-weight: 600;
+  text-decoration: none;
+}
+.breadcrumbs span {
+  margin: 0 8px;
+  color: var(--rust);
+}
+.catalog-hero {
+  max-width: var(--max);
+  margin: auto;
+  padding: 120px 28px 100px;
+}
+.catalog-hero h1,
+.catalog-list h2,
+.catalog-note h2 {
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+.catalog-hero h1 {
+  max-width: 950px;
+  margin: 0 0 30px;
+  font-size: clamp(4rem, 7vw, 7rem);
+}
+.catalog-hero > p:last-child {
+  max-width: 660px;
+  font-size: 1.15rem;
+}
+.catalog-controls {
+  max-width: var(--max);
+  margin: auto;
+  padding: 0 28px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.catalog-controls > div {
+  min-height: 230px;
+  padding: 30px;
+  border: 1px solid var(--line);
+}
+.catalog-controls > div + div {
+  border-left: 0;
+}
+.catalog-controls span {
+  display: block;
+  margin-bottom: 55px;
+  color: var(--rust);
+  font-family: "Newsreader", serif;
+  font-size: 1.35rem;
+}
+.catalog-controls strong {
+  font-family: "Newsreader", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.catalog-list {
+  padding: 100px max(calc((100% - var(--max)) / 2), 28px);
+  background: var(--cream);
+}
+.catalog-heading {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 80px;
+  align-items: end;
+}
+.catalog-heading h2,
+.catalog-note h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+}
+.product-card {
+  margin-top: 60px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.product-card-top,
+.product-card-body,
+.product-card-meta {
+  padding: 24px 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+.product-card-top {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.product-category {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.status-pill {
+  padding: 6px 10px;
+  background: #dce4d5;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+.product-card-body {
+  align-items: end;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.product-card-body > div {
+  min-width: 48%;
+}
+.product-card-body h3 {
+  margin: 0;
+  font: 400 clamp(2.5rem, 5vw, 4.5rem) / 1 "Newsreader", serif;
+}
+.product-method {
+  margin: 12px 0 0;
+  color: var(--rust);
+}
+.product-card-body > p {
+  max-width: 440px;
+  margin: 0;
+}
+.product-card-meta {
+  justify-content: flex-start;
+  border-top: 1px solid var(--line);
+}
+.product-card-meta span {
+  min-width: 170px;
+  font-size: 0.82rem;
+}
+.product-card-meta small {
+  display: block;
+  color: #6b746f;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+}
+.product-card-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 34px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.catalog-note {
+  max-width: 850px;
+  margin: auto;
+  padding: 110px 28px;
+  text-align: center;
+}
+.catalog-note > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 28px auto;
+}
 .program-hero-aside {
   border-top: 1px solid var(--ink);
   padding-top: 22px;
@@ -743,6 +904,43 @@ footer small {
   }
   .program-cta {
     padding: 75px 25px;
+  }
+  .catalog-hero {
+    padding: 75px 25px;
+  }
+  .catalog-hero h1 {
+    font-size: 3.7rem;
+  }
+  .catalog-controls,
+  .catalog-heading {
+    grid-template-columns: 1fr;
+  }
+  .catalog-controls {
+    padding: 0 25px 75px;
+  }
+  .catalog-controls > div + div {
+    border-left: 1px solid var(--line);
+    border-top: 0;
+  }
+  .catalog-controls span {
+    margin-bottom: 30px;
+  }
+  .catalog-list {
+    padding: 75px 25px;
+  }
+  .catalog-heading {
+    gap: 25px;
+  }
+  .product-card-top,
+  .product-card-body,
+  .product-card-meta {
+    flex-direction: column;
+  }
+  .product-card-body {
+    align-items: start;
+  }
+  .product-card-meta {
+    gap: 18px;
   }
   .decision-card,
   .contents-grid article {

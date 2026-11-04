@@ -46,7 +46,8 @@ Mã tĩnh của bản mockup hiện nằm tại `/workspace/sites/havan-mockup/d
 ```text
 dist/
 ├── index.html       # Trang chủ, điểm bắt đầu, journal, sản phẩm nổi bật
-├── program.html     # Trang tổng quan Hyperbolic Stretching
+├── products/        # Thư viện sản phẩm, catalog dữ liệu và các guide riêng
+├── program.html     # Redirect tương thích tới guide Hyperbolic Stretching
 ├── styles.css       # Giao diện desktop và responsive
 ├── app.js           # Menu, bài viết dạng dialog, nút so sánh AIDA/PAS
 └── assets/
