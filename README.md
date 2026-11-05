@@ -78,6 +78,7 @@ Do not delete unrelated MX/TXT records used for email or domain verification. DN
 
 ## Analytics and consent
 
-- Google Analytics 4 uses measurement ID `G-FVLMZX34P9` and loads only after a visitor selects **Allow analytics**.
+- Google Analytics 4 uses measurement ID `G-FVLMZX34P9` and loads only after a visitor selects **Allow**.
 - `app.js` sends `journal_click`, `program_click` and `provider_click` funnel events after consent.
 - Declining analytics prevents the Google tag from loading. Advertising storage, ad user data and ad personalization remain disabled.
+

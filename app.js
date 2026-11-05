@@ -43,7 +43,7 @@ function showConsentBanner(){
   const banner=document.createElement('aside');
   banner.className='consent-banner';
   banner.setAttribute('aria-label','Analytics preferences');
-  banner.innerHTML='<div><strong>Help HAVAN improve</strong><p>With your permission, we use Google Analytics to understand which guides are useful. Advertising tracking stays off.</p></div><div class="consent-actions"><button type="button" data-consent="granted">Allow analytics</button><button type="button" class="secondary" data-consent="denied">No thanks</button><a href="/privacy.html">Privacy</a></div>';
+  banner.innerHTML='<p><strong>Analytics preferences</strong><span>Allow anonymous usage data to help improve HAVAN. No advertising tracking.</span></p><div class="consent-actions"><button type="button" data-consent="granted">Allow</button><button type="button" class="secondary" data-consent="denied">Not now</button><a href="/privacy.html">Details</a></div>';
   banner.addEventListener('click',(event)=>{const choice=event.target.closest('[data-consent]')?.dataset.consent;if(choice)saveAnalyticsConsent(choice)});
   document.body.appendChild(banner);
 }
@@ -62,3 +62,4 @@ document.addEventListener('click',(event)=>{
   else if(!name&&url.hostname.endsWith('.hop.clickbank.net'))name='provider_click';
   if(name&&typeof window.gtag==='function')window.gtag('event',name,{link_url:link.href,page_path:location.pathname});
 });
+
