@@ -465,6 +465,28 @@ footer nav {
 footer small {
   color: #99a49e;
 }
+.consent-banner {
+  position: fixed;
+  z-index: 50;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 40px rgba(23, 35, 29, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.consent-banner strong { font-family: "Newsreader", serif; font-size: 1.35rem; font-weight: 500; }
+.consent-banner p { margin: 3px 0 0; max-width: 590px; font-size: 0.86rem; }
+.consent-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.consent-actions button { border: 0; background: var(--ink); color: #fff; padding: 11px 15px; font: 600 0.78rem "DM Sans", sans-serif; cursor: pointer; }
+.consent-actions .secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .article-page {
   max-width: 760px;
   margin: auto;
@@ -977,6 +999,8 @@ footer small {
   margin: 18px 0 5px;
 }
 @media (max-width: 800px) {
+  .consent-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px; align-items: stretch; flex-direction: column; gap: 14px; }
+  .consent-actions { flex-wrap: wrap; }
   .site-header {
     height: 70px;
   }

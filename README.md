@@ -75,3 +75,9 @@ Do not delete unrelated MX/TXT records used for email or domain verification. DN
 - Affiliate disclosures are shown near the links and documented in `disclosure.html` and `privacy.html`.
 - Update `privacy.html` before enabling first-party analytics, pixels, forms or a newsletter.
 - The hero image is AI-generated specifically for HAVAN and is not vendor media.
+
+## Analytics and consent
+
+- Google Analytics 4 uses measurement ID `G-FVLMZX34P9` and loads only after a visitor selects **Allow analytics**.
+- `app.js` sends `journal_click`, `program_click` and `provider_click` funnel events after consent.
+- Declining analytics prevents the Google tag from loading. Advertising storage, ad user data and ad personalization remain disabled.
