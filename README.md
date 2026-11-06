@@ -1,6 +1,13 @@
 # HAVAN (`havan.fit`)
 
-Static English-language editorial website for calm at-home movement guidance. No build step or backend is required.
+Static English-language editorial website for calm at-home movement guidance, built with Eleventy and deployed to GitHub Pages.
+
+## Content architecture
+
+- Eleventy builds the production site into `_site/`; never edit that directory directly.
+- Journal front matter drives the home-page article cards and collection order.
+- `sitemap.njk` generates `sitemap.xml` from the pages Eleventy builds.
+- `CONTENT_WORKFLOW.md` is the operating guide for adding articles and licensed media.
 
 ## Product guide architecture
 
@@ -11,29 +18,30 @@ Static English-language editorial website for calm at-home movement guidance. No
 - `scripts/validate-products.mjs` prevents deployment when catalog entries, page IDs, disclosures or CTA tracking IDs are inconsistent.
 - `program.html` preserves the old URL and redirects to the current Hyperbolic Stretching guide.
 
-Run the product-system check locally with:
+Run the complete production check locally with:
 
 ```powershell
-node scripts/validate-products.mjs
+npm install
+npm run check
 ```
 
 ## SEO checks
 
-The deployment workflow rebuilds `sitemap.xml` from indexable HTML files and uses the latest Git commit date for each URL. It then checks every indexable page for a title, description, canonical URL, favicon, Open Graph metadata, Twitter card and valid JSON-LD.
+The deployment workflow builds `_site`, generates `sitemap.xml`, and checks every indexable page for a title, description, canonical URL, favicon, Open Graph metadata, Twitter card, valid JSON-LD and working internal links.
 
 ```powershell
-node scripts/build-sitemap.mjs
-node scripts/validate-seo.mjs
+npm run check
 ```
 
 Local mobile Lighthouse baseline after the SEO/performance pass: Performance 98, Accessibility 100, Best Practices 100 and SEO 100. Results can vary by device, network and deployment response time.
 
 ## Local preview
 
-Run a static server from this directory, for example:
+Install dependencies and start Eleventy’s local server:
 
 ```powershell
-npx --yes http-server . -p 8080 -c-1
+npm install
+npm run serve
 ```
 
 Then open `http://localhost:8080`.

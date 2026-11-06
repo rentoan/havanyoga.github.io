@@ -32,17 +32,7 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="HAVAN home"
-        >HAVAN<span>.</span></a
-      ><button class="menu" type="button" aria-expanded="false" aria-controls="nav">
-        Menu
-      </button>
-      <nav id="nav" aria-label="Main navigation">
-        <a href="#start">Start here</a><a href="movement-library.html">Library</a
-        ><a href="#journal">Journal</a><a href="products/">Programs</a><a href="about.html">About</a>
-      </nav>
-    </header>
+    {% include "site-header.njk" %}
     <main id="main">
       <section class="hero">
         <img
@@ -126,49 +116,13 @@
           </p>
         </div>
         <div class="article-grid">
+          {% for post in collections.journal %}
           <article>
-            <p class="meta">9 minutes · Beginner guide</p>
-            <h3>
-              <a href="journal/movement-breaks-desk-workers.html"
-                >Movement breaks for desk workers: a beginner’s guide</a
-              >
-            </h3>
-            <p>
-              What counts as a movement break, where it can fit and how to begin
-              without adding another demanding routine.
-            </p>
+            <p class="meta">{{ post.data.readingTime }} · {{ post.data.contentType }}</p>
+            <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            <p>{{ post.data.summary }}</p>
           </article>
-          <article>
-            <p class="meta">1 minute · Practice</p>
-            <h3>
-              <a href="journal/movement-break.html"
-                >A one-minute movement break between meetings</a
-              >
-            </h3>
-            <p>
-              Pause the screen, change position and notice what feels available.
-            </p>
-          </article>
-          <article>
-            <p class="meta">4 minutes · Guide</p>
-            <h3>
-              <a href="journal/choose-a-starting-point.html"
-                >Too many stretching videos? Start with these three questions</a
-              >
-            </h3>
-            <p>A filter for finding something you can actually return to.</p>
-          </article>
-          <article>
-            <p class="meta">6 minutes · Checklist</p>
-            <h3>
-              <a href="journal/before-you-buy.html"
-                >What to check before buying a home movement program</a
-              >
-            </h3>
-            <p>
-              Separate a compelling sales page from the details that matter.
-            </p>
-          </article>
+          {% endfor %}
         </div>
       </section>
       <section class="program-tease">
@@ -202,14 +156,6 @@
         </p>
       </section>
     </main>
-    <footer>
-      <a class="brand light" href="index.html">HAVAN<span>.</span></a>
-      <p>Calm guidance for moving at home.</p>
-      <nav aria-label="Footer navigation">
-        <a href="about.html">About</a><a href="disclosure.html">Disclosure</a
-        ><a href="privacy.html">Privacy</a>
-      </nav>
-      <small>© <span id="year"></span> HAVAN. All rights reserved.</small>
-    </footer>
+    {% include "site-footer.njk" %}
   </body>
 </html>

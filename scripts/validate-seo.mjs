@@ -2,7 +2,7 @@ import { readdir, readFile, access } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-const root = process.cwd();
+const root = path.resolve(process.argv[2] || "_site");
 const excluded = new Set(["404.html", "program.html"]);
 
 async function walk(directory, prefix = "") {

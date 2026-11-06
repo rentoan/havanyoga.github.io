@@ -16,7 +16,7 @@ Publication status values: `draft`, `published`, `paused`, or `archived`.
 2. Add one object to `catalog.json` with a unique lowercase slug.
 3. Copy an existing guide to `<slug>.html` and rewrite every section for that product. Do not publish a thin template with swapped names.
 4. Set a canonical URL: `https://havan.fit/products/<slug>.html`.
-5. Add the guide to `products/index.html` and `sitemap.xml`.
+5. Add the guide to `products/index.html`. Eleventy adds the built page to `sitemap.xml` automatically.
 6. Use unique ClickBank TIDs or equivalent tracking IDs for hero, middle and final CTAs.
 7. Put a plain-language commission disclosure before the first affiliate link and near later CTAs.
 8. Update privacy/disclosure pages when a new network or tracking technology changes data handling.

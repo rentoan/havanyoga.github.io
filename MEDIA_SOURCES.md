@@ -2,7 +2,7 @@
 
 Keep this log with downloaded media so licenses and attribution can be checked later.
 
-## `journal/movement-breaks-desk-worker.jpg`
+## `assets/journal/movement-breaks-desk-worker.jpg`
 
 - Work: “Woman stretches at home office desk while working on laptop”
 - Creator: Shixart1985

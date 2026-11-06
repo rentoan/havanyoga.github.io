@@ -10,10 +10,11 @@
 
 ## Automated technical controls
 
-- `scripts/build-sitemap.mjs` discovers indexable HTML and writes canonical URLs with Git-based modification dates.
-- `scripts/validate-seo.mjs` rejects missing titles, descriptions, canonical URLs, favicon, Open Graph data, Twitter cards or invalid JSON-LD.
-- `scripts/validate-products.mjs` checks product IDs, disclosures and affiliate TIDs.
-- GitHub Actions runs all three controls before deployment.
+- Eleventy’s `sitemap.njk` discovers built pages and writes their public URLs and modification dates.
+- `scripts/validate-seo.mjs` checks the built `_site` for titles, descriptions, canonical URLs, favicon, Open Graph data, Twitter cards and valid JSON-LD.
+- `scripts/validate-products.mjs` checks built product pages, product IDs, disclosures and affiliate TIDs.
+- `scripts/validate-links.mjs` rejects broken internal links in the built site.
+- GitHub Actions runs the full `npm run check` workflow before deployment.
 
 ## Content rules
 

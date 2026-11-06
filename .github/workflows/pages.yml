@@ -20,16 +20,24 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Eleventy site
+        run: npm run build
       - name: Validate product catalog
-        run: node scripts/validate-products.mjs
-      - name: Build sitemap
-        run: node scripts/build-sitemap.mjs
+        run: node scripts/validate-products.mjs _site
       - name: Validate SEO metadata
-        run: node scripts/validate-seo.mjs
+        run: node scripts/validate-seo.mjs _site
+      - name: Validate internal links
+        run: node scripts/validate-links.mjs _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

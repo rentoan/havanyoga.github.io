@@ -2,7 +2,7 @@ import { readFile, access } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-const root = process.cwd();
+const root = path.resolve(process.argv[2] || "_site");
 const catalogPath = path.join(root, "products", "catalog.json");
 const catalog = JSON.parse(await readFile(catalogPath, "utf8"));
 const errors = [];

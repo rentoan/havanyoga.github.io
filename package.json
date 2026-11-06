@@ -1,0 +1,14 @@
+{
+  "name": "havan-fit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/clean-site.mjs && eleventy",
+    "serve": "node scripts/clean-site.mjs && eleventy --serve",
+    "check": "npm run build && node scripts/validate-products.mjs _site && node scripts/validate-seo.mjs _site && node scripts/validate-links.mjs _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8"
+  }
+}
