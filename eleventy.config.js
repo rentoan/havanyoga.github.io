@@ -24,6 +24,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("publicUrl", (url) =>
     url === "/index.html" ? "/" : url.replace(/\/index\.html$/, "/"),
   );
+  eleventyConfig.addFilter("filterByTopic", (posts = [], slug) =>
+    posts.filter((post) => post.data.topic === slug),
+  );
 
   return {
     dir: { input: ".", includes: "_includes", data: "_data", output: "_site" },

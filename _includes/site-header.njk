@@ -4,7 +4,7 @@
   <nav id="nav" aria-label="Main navigation">
     <a href="/#start">Start here</a>
     <a href="/movement-library.html"{% if page.url == '/movement-library.html' %} aria-current="page"{% endif %}>Library</a>
-    <a href="/#journal">Journal</a>
+    <a href="/journal/"{% if '/journal/' in page.url %} aria-current="page"{% endif %}>Journal</a>
     <a href="/products/"{% if '/products/' in page.url %} aria-current="page"{% endif %}>Programs</a>
     <a href="/about.html"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
   </nav>

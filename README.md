@@ -56,6 +56,8 @@ Then open `http://localhost:8080`.
 
 The included `CNAME` file declares `havan.fit`.
 
+Journal navigation is generated from article front matter. `/journal/` lists every article and `_data/topics.json` drives the topic archive pages, so publishing a correctly tagged article requires no manual archive edits.
+
 Do not select **Deploy from a branch** for this repository. Branch deployment publishes Eleventy source files before they are rendered; only the GitHub Actions workflow uploads the generated `_site/` artifact.
 
 ## DNS for `havan.fit`

@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "movement-breaks",
+    "title": "Movement breaks",
+    "description": "Short, practical ways to change position and add movement to a desk-based day.",
+    "order": 1
+  },
+  {
+    "slug": "starting-points",
+    "title": "Starting points",
+    "description": "Clear guidance for choosing a routine that fits your time, space and current capacity.",
+    "order": 2
+  },
+  {
+    "slug": "buyer-guides",
+    "title": "Buyer guides",
+    "description": "Calm checklists for evaluating movement programs before spending your money.",
+    "order": 3
+  }
+]
