@@ -56,6 +56,8 @@ Then open `http://localhost:8080`.
 
 The included `CNAME` file declares `havan.fit`.
 
+Do not select **Deploy from a branch** for this repository. Branch deployment publishes Eleventy source files before they are rendered; only the GitHub Actions workflow uploads the generated `_site/` artifact.
+
 ## DNS for `havan.fit`
 
 At the domain registrar/DNS provider, add these GitHub Pages records for the apex domain:
